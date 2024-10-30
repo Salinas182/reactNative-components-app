@@ -77,41 +77,34 @@ export const HomeScreen = () => {
         <ScrollView>
           <Title text="Menu options" safe />
 
-          {
-            animationMenuItems.map((item, index) => (
-              <MenuItem
-                {...item}
-                key={item.component}
-                isFirst={index === 0}
-                isLast={index === animationMenuItems.length - 1}
-              />
-            ))
-          }
+          {animationMenuItems.map((item, index) => (
+            <MenuItem
+              {...item}
+              key={item.component}
+              isFirst={index === 0}
+              isLast={index === animationMenuItems.length - 1}
+            />
+          ))}
 
           <View style={{marginTop: 30}} />
-          {
-            menuItems.map((item, index) => (
-              <MenuItem
-                {...item}
-                key={item.component}
-                isFirst={index === 0}
-                isLast={index === menuItems.length - 1}
-              />
-            ))
-          }
+          {uiMenuItems.map((item, index) => (
+            <MenuItem
+              {...item}
+              key={item.component}
+              isFirst={index === 0}
+              isLast={index === uiMenuItems.length - 1}
+            />
+          ))}
 
           <View style={{marginTop: 30}} />
-          {
-            uiMenuItems.map((item, index) => (
-              <MenuItem
-                {...item}
-                key={item.component}
-                isFirst={index === 0}
-                isLast={index === uiMenuItems.length - 1}
-              />
-            ))
-          }
-
+          {menuItems.map((item, index) => (
+            <MenuItem
+              {...item}
+              key={item.component}
+              isFirst={index === 0}
+              isLast={index === menuItems.length - 1}
+            />
+          ))}
         </ScrollView>
       </View>
     </View>
